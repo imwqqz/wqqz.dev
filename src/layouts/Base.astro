@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+import Navigation from '../components/Navigation.astro';
+
+interface BaseProps { title?: string; description?: string; ogImage?: string }
+const { title = 'wqqz.dev', description = 'Cybersecurity Specialist portfolio', ogImage } = Astro.props as BaseProps;
+const siteName = 'wqqz.dev';
+const canonical = "https://wqqz.dev";
+const siteUrl = "https://wqqz.dev";
+---
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta name="description" content={description}/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="mask-icon" href="/favicon.svg" color="#222222"/>
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131316"/>
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfd"/>
+    <meta name="msapplication-TileColor" content="#131316"/>
+    <meta name="robots" content="index,follow"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+          rel="stylesheet"/>
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem('theme');
+        const dark = stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content={siteName}/>
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:locale" content="en_US"/>
+    {canonical &&
+            <meta property="og:url" content={canonical}/>}
+    {ogImage &&
+            <meta property="og:image" content={ogImage}/>}
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content={title}/>
+    <meta name="twitter:description" content={description}/>
+    {ogImage &&
+            <meta name="twitter:image" content={ogImage}/>}
+
+    {canonical &&
+            <link rel="canonical" href={canonical}/>}
+
+    <title>{title}</title>
+    {siteUrl && (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": siteName,
+        "url": siteUrl,
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": `${siteUrl}/archives?q={search_term_string}`,
+          "query-input": "required name=search_term_string"
+        }
+      })} />
+    )}
+</head>
+<body class="font-sans antialiased bg-background text-foreground flex flex-col min-h-screen">
+<Navigation />
+<main class="flex-grow flex flex-col">
+<slot/>
+</main>
+</body>
+</html>
