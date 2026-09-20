@@ -1,26 +1,25 @@
 ---
 import Base from "../layouts/Base.astro";
-import { info, contacts } from "../lib/info.ts";
+import siteInfo from "../../public/0user.json";
 ---
 
-<Base title={info.site.title}
-      description={info.site.description}>
+<Base title={siteInfo.site.title}
+      description={siteInfo.site.description}>
 
     <section class="container mx-auto px-6 py-16 flex-grow flex flex-col justify-center">
         <div class="max-w-3xl mx-auto w-full">
-            <h1 class="mb-2 text-4xl md:text-5xl font-bold tracking-tight text-balance">{info.name}</h1>
-            <p class="mb-4 text-lg md:text-xl text-muted-foreground">{info.role}</p>
+            <h1 class="mb-2 text-4xl md:text-5xl font-bold tracking-tight text-balance">{siteInfo.name}</h1>
+            <p class="mb-4 text-lg md:text-xl text-muted-foreground">{siteInfo.role}</p>
 
             <p class="mb-4 text-base md:text-lg text-foreground/85 leading-relaxed text-pretty">
-                Security enthusiast interested in offensive security, vulnerability research, and threat intelligence —
-                and equally at home in distributed systems, machine learning, and the future of computing.
+                {siteInfo.home.bio}
             </p>
             <p class="mb-10 text-base md:text-lg text-foreground/85 leading-relaxed text-pretty">
-                Thanks for visiting! I'm usually just taking a nap.
+                {siteInfo.home.note}
             </p>
 
             <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                {contacts.map((contact) => (
+                {siteInfo.contacts.map((contact) => (
                         <div>
                             [{contact.label}: <a
                                 href={contact.href}

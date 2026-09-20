@@ -1,6 +1,10 @@
 {
     "name": "wqqz",
     "role": "Cybersecurity Specialist & Security Enthusiast",
+    "home": {
+        "bio": "Security enthusiast interested in offensive security, vulnerability research, and threat intelligence — and equally at home in distributed systems, machine learning, and the future of computing.",
+        "note": "Thanks for visiting! I'm usually just taking a nap."
+    },
     "site": {
         "name": "wqqz.dev",
         "url": "https://wqqz.dev",
