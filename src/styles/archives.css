@@ -236,14 +236,15 @@
     margin: 0.5em 0;
   }
 
-  .prose-callout-note,
+.prose-callout-note,
   .prose-callout-info,
   .prose-callout-important { --callout: var(--accent); }
   .prose-callout-tip,
   .prose-callout-success { --callout: var(--success); }
-  .prose-callout-warning { --callout: oklch(77% .16 70); }
-  .prose-callout-caution { --callout: oklch(64% .21 25); }
+  .prose-callout-warning { --callout: var(--warning); }
+  .prose-callout-caution { --callout: var(--caution); }
 
+  /* tag colour cycle — edit in global.css tokens if you want to theme them */
   .tag-h-0 {
     color: hsl(0 85% 62%);
     border-color: currentColor;
