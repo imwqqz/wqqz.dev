@@ -1,4 +1,4 @@
-# wqqz.dev
+# example-portfolio
 
 > Highly customizable and performant portfolio template built with Astro, React, and Tailwind CSS.
 
@@ -25,8 +25,8 @@ You'll need Node.js (v18 or newer) and `pnpm`.
 
 ```bash
 # grab a copy of the repo
-git clone https://github.com/imwqqz/wqqz.dev
-cd wqqz.dev
+git clone https://github.com/example/example-portfolio
+cd example-portfolio
 
 # install the dependencies
 pnpm install
@@ -45,9 +45,9 @@ This is the one file you'll touch the most. It holds your name and role, the hom
 
 ```json
 {
-  "name": "wqqz",
+  "name": "John Doe",
   "contacts": [
-    { "label": "email", "text": "test@mail.com", "href": "mailto:test@mail.com" }
+    { "label": "email", "text": "john.doe@example.com", "href": "mailto:john.doe@example.com" }
   ]
 }
 ```
@@ -93,7 +93,7 @@ The site uses JetBrains Mono for everything. That's loaded in `src/layouts/Base.
 ## Project structure
 
 ```
-wqqz.dev/
+example-portfolio/
 ├── public/
 │   └── 0user.json          # your site info, contacts, resume
 ├── src/

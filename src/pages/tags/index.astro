@@ -2,12 +2,13 @@
 import Base from "../../layouts/Base.astro";
 import { getArchivePosts } from "../../lib/archive_data";
 import { getAllTags } from "../../lib/tags";
+import { info } from "../../lib/info";
 
 const posts = await getArchivePosts();
 const tags = getAllTags(posts);
 ---
 
-<Base title="Tags - wqqz.dev" description="All topics and tags across articles.">
+<Base title={`Tags - ${info.site.name}`} description="All topics and tags across articles.">
   <section class="container mx-auto px-6 pt-16 pb-20">
     <div class="max-w-3xl mx-auto">
       <header class="mb-8">

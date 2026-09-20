@@ -1,56 +1,56 @@
 {
-    "name": "wqqz",
-    "role": "Cybersecurity Specialist & Security Enthusiast",
+    "name": "John Doe",
+    "role": "Software Engineer",
     "home": {
-        "bio": "Security enthusiast interested in offensive security, vulnerability research, and threat intelligence — and equally at home in distributed systems, machine learning, and the future of computing.",
-        "note": "Thanks for visiting! I'm usually just taking a nap."
+        "bio": "Generalist software engineer focused on building reliable, maintainable systems — equally comfortable across the frontend, backend, and infrastructure layers.",
+        "note": "Thanks for visiting! This is a demo site with placeholder content."
     },
     "site": {
-        "name": "wqqz.dev",
-        "url": "https://wqqz.dev",
-        "title": "wqqz - Cybersecurity Specialist",
-        "description": "Cybersecurity professional specializing in penetration testing, threat analysis, and security architecture",
+        "name": "example.com",
+        "url": "https://example.com",
+        "title": "John Doe - Software Engineer",
+        "description": "Software engineer specializing in web applications, APIs, and cloud infrastructure",
         "locale": "en_US",
         "ogImage": ""
     },
     "contacts": [
         {
             "label": "email",
-            "text": "test@mail.com",
-            "href": "mailto:test@mail.com"
+            "text": "john.doe@example.com",
+            "href": "mailto:john.doe@example.com"
         },
         {
             "label": "github",
-            "text": "@imwqqz",
-            "href": "https://github.com/imwqqz",
+            "text": "@johndoe",
+            "href": "https://github.com/johndoe",
             "target": "_blank",
             "rel": "noopener noreferrer"
         },
         {
             "label": "twitter",
-            "text": "@imwqqz",
-            "href": "https://x.com/imwqqz",
+            "text": "@johndoe",
+            "href": "https://x.com/johndoe",
             "target": "_blank",
             "rel": "noopener noreferrer"
         },
         {
             "label": "discord",
-            "text": "@im.wqqz",
-            "href": "https://discord.com/channels/users/911042381808295937es",
+            "text": "@johndoe",
+            "href": "https://discord.com/users/000000000000000000",
             "target": "_blank",
             "rel": "noopener noreferrer"
         }
     ],
     "resume": {
-        "name": "wqqz",
-        "role": "Cybersecurity Specialist",
-        "bio": "Security enthusiast and researcher specializing in penetration testing, threat analysis, security architecture, and vulnerability research. Passionate about distributed systems, resilient computing, and adversarial security.",
+        "name": "John Doe",
+        "role": "Software Engineer",
+        "bio": "Software engineer with a broad background across web applications, APIs, databases, and cloud infrastructure. Focused on clean architecture, automation, and shipping reliable software.",
         "downloads": {
             "cv": {
                 "label": "download cv",
                 "text": "cv.pdf",
                 "href": "/cv.pdf",
-                "filename": "wqqz-cv.pdf"
+                "filename": "john-doe-cv.pdf"
             },
             "pgp": {
                 "label": "download pgp",
@@ -59,76 +59,79 @@
                 "filename": "publickey.asc"
             }
         },
-        "pgpFingerprint": "7E06 5BFC 3D45 6AB4 FA66 44E0 E763 FF98 8533 5C77",
+        "pgpFingerprint": "AAAA AAAA AAAA AAAA AAAA AAAA AAAA",
         "experience": [
             {
-                "role": "Cybersecurity Specialist",
-                "company": "Independent / Security Research",
+                "role": "Senior Software Engineer",
+                "company": "Example Company",
                 "period": "2023 — Present",
                 "description": [
-                    "Performed offensive security assessments, vulnerability research, and penetration tests across cloud and web infrastructures.",
-                    "Designed threat intelligence pipelines and automated incident response playbooks.",
-                    "Researched 0-day and 1-day vulnerability vectors in modern architectures."
+                    "Led feature development for a large-scale web application, improving reliability and performance.",
+                    "Designed and maintained internal tooling, CI pipelines, and automated testing strategies.",
+                    "Mentored junior engineers and drove code review and architecture discussions."
                 ]
             },
             {
-                "role": "Security & Systems Engineer",
-                "company": "Infrastructure & Security",
+                "role": "Software Engineer",
+                "company": "Example Company",
                 "period": "2021 — 2023",
                 "description": [
-                    "Architected secure containerized environments and hardening baselines for Linux and Kubernetes clusters.",
-                    "Implemented continuous monitoring, SIEM detection rules, and proactive threat hunting methodologies."
+                    "Built and shipped REST and GraphQL APIs backed by relational and NoSQL databases.",
+                    "Deployed and operated services on cloud infrastructure with monitoring and alerting.",
+                    "Collaborated across teams to plan and deliver multi-quarter product initiatives."
                 ]
             }
         ],
         "skills": [
             {
-                "category": "Offensive Security",
+                "category": "Languages",
                 "items": [
-                    "Penetration Testing",
-                    "Vulnerability Assessment",
-                    "Red Teaming",
-                    "0-Day / 1-Day Research",
-                    "Web & API Security"
-                ]
-            },
-            {
-                "category": "Defensive & Operations",
-                "items": [
-                    "Threat Analysis",
-                    "Incident Response",
-                    "SIEM & Detection Engineering",
-                    "Hardening",
-                    "Network Forensics"
-                ]
-            },
-            {
-                "category": "Systems & Infrastructure",
-                "items": [
-                    "Linux / Unix",
-                    "Kubernetes",
-                    "Docker",
-                    "Cloud Security (AWS/GCP)",
-                    "Distributed Systems"
-                ]
-            },
-            {
-                "category": "Languages & Tools",
-                "items": [
+                    "TypeScript",
+                    "JavaScript",
                     "Python",
                     "Go",
-                    "Rust",
-                    "Bash",
-                    "Wireshark",
-                    "Burp Suite"
+                    "SQL",
+                    "Bash"
+                ]
+            },
+            {
+                "category": "Frameworks & Libraries",
+                "items": [
+                    "React",
+                    "Node.js",
+                    "Express",
+                    "Astro",
+                    "Prisma",
+                    "Tailwind CSS"
+                ]
+            },
+            {
+                "category": "Infrastructure",
+                "items": [
+                    "Docker",
+                    "Kubernetes",
+                    "AWS",
+                    "GCP",
+                    "Terraform",
+                    "CI/CD"
+                ]
+            },
+            {
+                "category": "Practices",
+                "items": [
+                    "Testing",
+                    "Code Review",
+                    "Agile",
+                    "Observability",
+                    "Security Awareness"
                 ]
             }
         ],
         "education": [
             {
-                "degree": "B.S. in Computer Science / Cybersecurity",
-                "institution": "University Studies",
-                "period": "2019 — 2023"
+                "degree": "B.S. in Computer Science",
+                "institution": "Example University",
+                "period": "2017 — 2021"
             }
         ]
     }

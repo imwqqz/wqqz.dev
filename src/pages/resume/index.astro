@@ -5,7 +5,7 @@ import { resume, contacts } from "../../lib/info";
 ---
 
 <Base title={`${resume.name} - Resume`}
-      description={`Cybersecurity Specialist resume for ${resume.name}. Penetration testing, threat analysis, security architecture, and system hardening.`}>
+      description={`${resume.role} resume for ${resume.name}.`}>
 
     <section class="container mx-auto px-6 pt-16 pb-20 flex-grow flex flex-col justify-center">
         <div class="max-w-3xl mx-auto w-full">
@@ -22,7 +22,7 @@ import { resume, contacts } from "../../lib/info";
                         <div>
                             [cv: <a
                                 href={resume.downloads.cv.href}
-                                download={resume.downloads.cv.filename ?? "wqqz-cv.pdf"}
+                                download={resume.downloads.cv.filename ?? "cv.pdf"}
                                 class="text-muted-foreground underline underline-offset-2 decoration-accent/50 hover:text-accent hover:decoration-accent transition-colors font-medium"
                             >{resume.downloads.cv.text}</a>]
                         </div>
@@ -42,7 +42,7 @@ import { resume, contacts } from "../../lib/info";
                     <div class="flex items-center gap-2.5 shrink-0">
                         <a
                             href={resume.downloads.cv.href}
-                            download={resume.downloads.cv.filename ?? "wqqz-cv.pdf"}
+                            download={resume.downloads.cv.filename ?? "cv.pdf"}
                             class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-md border border-border bg-foreground text-background hover:bg-foreground/90 transition-colors shadow-sm"
                         >
                             <Download size={14} /> Download CV
