@@ -1,17 +1,15 @@
 ---
 import Base from "../layouts/Base.astro";
-import { contacts } from "../lib/info.ts";
+import { info, contacts } from "../lib/info.ts";
 ---
 
-<Base title="wqqz - Cybersecurity Specialist"
-      description="Cybersecurity professional specializing in penetration testing, threat analysis, and security architecture">
+<Base title={info.site.title}
+      description={info.site.description}>
 
     <section class="container mx-auto px-6 py-16 flex-grow flex flex-col justify-center">
         <div class="max-w-3xl mx-auto w-full">
-            <h1 class="mb-2 text-4xl md:text-5xl font-bold tracking-tight text-balance">wqqz</h1>
-            <p class="mb-4 text-lg md:text-xl text-muted-foreground">
-                Cybersecurity Specialist&nbsp;<span class="text-border mx-1">·</span>Security Enthusiast
-            </p>
+            <h1 class="mb-2 text-4xl md:text-5xl font-bold tracking-tight text-balance">{info.name}</h1>
+            <p class="mb-4 text-lg md:text-xl text-muted-foreground">{info.role}</p>
 
             <p class="mb-4 text-base md:text-lg text-foreground/85 leading-relaxed text-pretty">
                 Security enthusiast interested in offensive security, vulnerability research, and threat intelligence —

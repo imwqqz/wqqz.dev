@@ -1,12 +1,15 @@
 ---
 import "../styles/global.css";
 import Navigation from '../components/Navigation.astro';
+import { info } from '../lib/info.ts';
 
 interface BaseProps { title?: string; description?: string; ogImage?: string }
-const { title = 'wqqz.dev', description = 'Cybersecurity Specialist portfolio', ogImage } = Astro.props as BaseProps;
-const siteName = 'wqqz.dev';
-const canonical = "https://wqqz.dev";
-const siteUrl = "https://wqqz.dev";
+const { title = info.site.title, description = info.site.description, ogImage } = Astro.props as BaseProps;
+const siteName = info.site.name;
+const canonical = info.site.url;
+const siteUrl = info.site.url;
+const siteLocale = info.site.locale ?? 'en_US';
+const resolvedOgImage = ogImage ?? (info.site.ogImage || undefined);
 ---
 <html lang="en">
 <head>
@@ -35,17 +38,17 @@ const siteUrl = "https://wqqz.dev";
     <meta property="og:site_name" content={siteName}/>
     <meta property="og:title" content={title}/>
     <meta property="og:description" content={description}/>
-    <meta property="og:locale" content="en_US"/>
+    <meta property="og:locale" content={siteLocale}/>
     {canonical &&
             <meta property="og:url" content={canonical}/>}
-    {ogImage &&
-            <meta property="og:image" content={ogImage}/>}
+    {resolvedOgImage &&
+            <meta property="og:image" content={resolvedOgImage}/>}
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content={title}/>
     <meta name="twitter:description" content={description}/>
-    {ogImage &&
-            <meta name="twitter:image" content={ogImage}/>}
+    {resolvedOgImage &&
+            <meta name="twitter:image" content={resolvedOgImage}/>}
 
     {canonical &&
             <link rel="canonical" href={canonical}/>}
