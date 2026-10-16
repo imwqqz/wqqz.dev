@@ -79,6 +79,18 @@ Some nice extras your markdown supports:
 ```bash frame="terminal" group="run" tab="pnpm"          a terminal window, tabs if you group
 ```
 
+## Deployment
+
+Every push to `master` builds a Docker image via GitHub Actions (`.github/workflows/docker.yml`) and publishes it to `ghcr.io/saboti215/portfolio:latest`. The image serves the static build with unprivileged nginx on port `8080`, without an access log.
+
+On the Docker host, `compose.yml` runs the site plus Watchtower, which pulls new images every five minutes:
+
+```bash
+docker compose up -d
+```
+
+TLS and the access log are handled by the reverse proxy in front of the container. If its logging changes, update section 4 of `src/pages/datenschutz/index.astro`.
+
 ## Customizing colors
 
 The whole color scheme lives in `src/styles/global.css`, split into a light block (`:root`) and a dark block. Every color has a short comment next to it saying what it's used for, so you can just tweak the `oklch(...)` values and see the difference.
@@ -88,7 +100,7 @@ The whole color scheme lives in `src/styles/global.css`, split into a light bloc
 --accent:     oklch(54% .22 293);    /* highlight: links, focus */
 ```
 
-The site uses JetBrains Mono for everything. That's loaded in `src/layouts/Base.astro`.
+The site uses JetBrains Mono for everything. It is self-hosted via [`@fontsource/jetbrains-mono`](https://fontsource.org/fonts/jetbrains-mono) (no requests to Google Fonts) and imported in `src/layouts/Base.astro`. The font is licensed under the [SIL Open Font License 1.1](https://github.com/JetBrains/JetBrainsMono/blob/master/OFL.txt).
 
 ## Project structure
 

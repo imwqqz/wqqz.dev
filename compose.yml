@@ -1,0 +1,41 @@
+# Runs on the Docker host: docker compose up -d
+services:
+  portfolio:
+    image: ghcr.io/saboti215/portfolio:latest
+    container_name: portfolio
+    restart: unless-stopped
+    ports:
+      # reachable for the reverse proxy only; adjust/firewall as needed
+      - "8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
+    # error output only, no visitor data; capped in size
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "2"
+
+  watchtower:
+    image: nickfedor/watchtower:latest
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      TZ: Europe/Berlin
+      WATCHTOWER_LABEL_ENABLE: "true"
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_POLL_INTERVAL: "300"
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "2"
