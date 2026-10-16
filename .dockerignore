@@ -7,7 +7,5 @@ dist
 .junie
 *.md
 !src/content/**/*.md
-preview.png
-scripts
 Dockerfile
 compose.yml

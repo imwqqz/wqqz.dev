@@ -2,8 +2,6 @@
 
 > Highly customizable and performant portfolio template built with Astro, React, and Tailwind CSS.
 
-![preview.png](preview.png)
-
 ## What's inside
 
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
@@ -119,4 +117,4 @@ example-portfolio/
 └── LICENSE
 ```
 
-> This project is licensed under the [MIT License ](LICENSE), Be nice. Details in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+> This project is licensed under the [MIT License](LICENSE).
