@@ -22,20 +22,3 @@ services:
       options:
         max-size: "1m"
         max-file: "2"
-
-  watchtower:
-    image: nickfedor/watchtower:latest
-    container_name: watchtower
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      TZ: Europe/Berlin
-      WATCHTOWER_LABEL_ENABLE: "true"
-      WATCHTOWER_CLEANUP: "true"
-      WATCHTOWER_POLL_INTERVAL: "300"
-    logging:
-      driver: json-file
-      options:
-        max-size: "1m"
-        max-file: "2"

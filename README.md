@@ -83,7 +83,7 @@ Some nice extras your markdown supports:
 
 Every push to `master` builds a Docker image via GitHub Actions (`.github/workflows/docker.yml`) and publishes it to `ghcr.io/saboti215/portfolio:latest`. The image serves the static build with unprivileged nginx on port `8080`, without an access log.
 
-On the Docker host, `compose.yml` runs the site plus Watchtower, which pulls new images every five minutes:
+On the Docker host, `compose.yml` runs the site. The container carries the `com.centurylinklabs.watchtower.enable=true` label, so an existing Watchtower can keep it updated:
 
 ```bash
 docker compose up -d
