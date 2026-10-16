@@ -5,12 +5,12 @@ import { getArchivePosts } from "../../lib/archive_data";
 
 const clientPosts = await getArchivePosts();
 ---
-<Base title="Blog" description="Notes on software engineering, performance, and the tools I use to build things.">
+<Base title="Blog" description="Notizen zu Software Engineering, Architektur und Cyber Security.">
   <section class="container mx-auto px-6 pt-16 pb-20">
     <div class="max-w-3xl mx-auto mb-8">
       <h1 class="text-4xl font-bold tracking-tight text-foreground">Blog</h1>
       <p class="mt-2 text-base text-muted-foreground leading-relaxed">
-        Notes on software engineering, performance, and the tools I use to build things.
+        Notizen zu Software Engineering, Architektur und Cyber Security.
       </p>
     </div>
     <ArchiveList posts={clientPosts} client:load />

@@ -39,7 +39,7 @@ const primaryTag = tagList.length > 0 ? tagList[0] : undefined;
 const displayTag = (t: string) => (t ? t.charAt(0).toUpperCase() + t.slice(1) : t);
 
 const formatDate = (date: Date) => {
-  return date.toLocaleDateString('en-US', {
+  return date.toLocaleDateString('de-DE', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -48,7 +48,7 @@ const formatDate = (date: Date) => {
 const formatShortDate = (d: string) => {
   const dt = new Date(d);
   if (isNaN(dt.getTime())) return d;
-  return dt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  return dt.toLocaleDateString('de-DE', { year: 'numeric', month: 'short', day: 'numeric' });
 };
 
 const posts = await getArchivePosts();
@@ -67,11 +67,11 @@ const pageUrl = Astro.url?.href ?? undefined;
           <nav aria-label="Breadcrumb" class="mb-6 print:hidden">
             <ol class="flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
               <li class="flex items-center gap-1">
-                <a href="/" class="transition-colors hover:text-foreground">Home</a>
+                <a href="/" class="transition-colors hover:text-foreground">Start</a>
               </li>
               <li class="flex items-center gap-1">
                 <ChevronRight size={12} class="opacity-60" aria-hidden="true" />
-                <a href="/archives" class="transition-colors hover:text-foreground">Archive</a>
+                <a href="/archives" class="transition-colors hover:text-foreground">Blog</a>
               </li>
               <li class="flex items-center gap-1">
                 <ChevronRight size={12} class="opacity-60" aria-hidden="true" />
@@ -92,7 +92,7 @@ const pageUrl = Astro.url?.href ?? undefined;
               </span>
               <span class="flex items-center gap-1.5">
                 <Clock size={13} aria-hidden="true" />
-                <span id="read-mins">1 min read</span>
+                <span id="read-mins">1 Min. Lesezeit</span>
               </span>
             </div>
             {tagList.length > 0 && (
@@ -118,7 +118,7 @@ const pageUrl = Astro.url?.href ?? undefined;
           <aside class="hidden xl:block">
             <div class="sticky top-24">
               <div class="toc" id="toc-root" data-active="0">
-                <h2 class="toc-title">On this page</h2>
+                <h2 class="toc-title">Auf dieser Seite</h2>
                 <TOC toc={tocItems} maxDepth={4} />
               </div>
             </div>
@@ -352,7 +352,7 @@ const pageUrl = Astro.url?.href ?? undefined;
       if (!article || !rt) return;
       const words = ((article.innerText || '').trim().match(/\S+/g) || []).length;
       const min = Math.max(1, Math.round(words / 230));
-      rt.textContent = `${min} min read`;
+      rt.textContent = `${min} Min. Lesezeit`;
     })();
   })();
 </script>

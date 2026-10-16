@@ -1,9 +1,11 @@
 ---
+import { Sun, Moon } from '@lucide/astro';
+
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/archives', label: 'Archive' },
+  { href: '/', label: 'Start' },
+  { href: '/archives', label: 'Blog' },
   { href: '/tags', label: 'Tags' },
-  { href: '/resume', label: 'Resume' },
+  { href: '/resume', label: 'Lebenslauf' },
 ];
 const pathname = Astro.url.pathname;
 function isActiveHref(href: string) {
@@ -22,7 +24,24 @@ function linkClass(href: string) {
         {links.map((l) => (
           <a href={l.href} class={linkClass(l.href)} aria-current={isActiveHref(l.href) ? 'page' : undefined}>{l.label}</a>
         ))}
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="Farbschema wechseln"
+          title="Farbschema wechseln"
+          class="inline-flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+        >
+          <Sun size={16} class="hidden dark:block" />
+          <Moon size={16} class="block dark:hidden" />
+        </button>
       </div>
     </div>
   </div>
 </nav>
+
+<script is:inline>
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const dark = document.documentElement.classList.toggle('dark');
+    try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch {}
+  });
+</script>

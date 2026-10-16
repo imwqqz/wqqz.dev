@@ -1,137 +1,188 @@
 {
-    "name": "John Doe",
-    "role": "Software Engineer",
+    "name": "Tobias Schlößer",
+    "role": "Senior Lead Software Engineer",
     "home": {
-        "bio": "Generalist software engineer focused on building reliable, maintainable systems — equally comfortable across the frontend, backend, and infrastructure layers.",
-        "note": "Thanks for visiting! This is a demo site with placeholder content."
+        "bio": "Technologie ist für mich nicht nur ein Handwerk, sondern das Werkzeug, um komplexe Herausforderungen durch durchdachtes Design und nachhaltige Architektur zu lösen. Mein Fokus liegt auf modernen Webanwendungen, insbesondere im Laravel-Ökosystem, und auf Cyber Security mit Schwerpunkt Digital Forensics & Incident Response.",
+        "note": "Neben dem Beruf engagiere ich mich als Vorstand beim CodeClubMG e.V. für den IT-Nachwuchs. Für einen fachlichen Austausch über Web-Architekturen, IT-Sicherheit oder die Zukunft der Softwareentwicklung bin ich immer offen."
     },
     "site": {
-        "name": "example.com",
-        "url": "https://example.com",
-        "title": "John Doe - Software Engineer",
-        "description": "Software engineer specializing in web applications, APIs, and cloud infrastructure",
-        "locale": "en_US",
+        "name": "Tobias Schlößer",
+        "url": "",
+        "title": "Tobias Schlößer - Senior Lead Software Engineer",
+        "description": "Senior Lead Software Engineer aus Mönchengladbach mit Fokus auf Software-Architektur, Laravel und Cyber Security.",
+        "locale": "de_DE",
         "ogImage": ""
     },
     "contacts": [
         {
-            "label": "email",
-            "text": "john.doe@example.com",
-            "href": "mailto:john.doe@example.com"
+            "label": "linkedin",
+            "text": "tobias-schloesser",
+            "href": "https://www.linkedin.com/in/tobias-schloesser",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
         },
         {
             "label": "github",
-            "text": "@johndoe",
-            "href": "https://github.com/johndoe",
-            "target": "_blank",
-            "rel": "noopener noreferrer"
-        },
-        {
-            "label": "twitter",
-            "text": "@johndoe",
-            "href": "https://x.com/johndoe",
-            "target": "_blank",
-            "rel": "noopener noreferrer"
-        },
-        {
-            "label": "discord",
-            "text": "@johndoe",
-            "href": "https://discord.com/users/000000000000000000",
+            "text": "@Saboti215",
+            "href": "https://github.com/Saboti215",
             "target": "_blank",
             "rel": "noopener noreferrer"
         }
     ],
     "resume": {
-        "name": "John Doe",
-        "role": "Software Engineer",
-        "bio": "Software engineer with a broad background across web applications, APIs, databases, and cloud infrastructure. Focused on clean architecture, automation, and shipping reliable software.",
-        "downloads": {
-            "cv": {
-                "label": "download cv",
-                "text": "cv.pdf",
-                "href": "/cv.pdf",
-                "filename": "john-doe-cv.pdf"
-            },
-            "pgp": {
-                "label": "download pgp",
-                "text": "publickey.asc",
-                "href": "/pgp/publickey.asc",
-                "filename": "publickey.asc"
-            }
-        },
-        "pgpFingerprint": "AAAA AAAA AAAA AAAA AAAA AAAA AAAA",
+        "name": "Tobias Schlößer",
+        "role": "Senior Software Engineer & Team Lead",
+        "location": "Mönchengladbach, Nordrhein-Westfalen",
+        "bio": "Als Softwareentwickler mit einer Leidenschaft für saubere, skalierbare Lösungen verbinde ich meine tägliche Praxis mit fundiertem akademischem Wissen. Ich sehe mich nicht bloß als Implementierer, sondern als Softwaredesigner, der den gesamten Lebenszyklus einer Applikation ganzheitlich betrachtet – von der Modellierung bis zum produktiven Deployment.",
         "experience": [
             {
-                "role": "Senior Software Engineer",
-                "company": "Example Company",
-                "period": "2023 — Present",
+                "role": "Senior Lead Software Engineer",
+                "company": "ITZ Rhein/Maas GmbH",
+                "location": "Mönchengladbach",
+                "period": "10/2024 — heute",
                 "description": [
-                    "Led feature development for a large-scale web application, improving reliability and performance.",
-                    "Designed and maintained internal tooling, CI pipelines, and automated testing strategies.",
-                    "Mentored junior engineers and drove code review and architecture discussions."
+                    "Teamleitung in der Softwareentwicklung.",
+                    "Software-Architektur mit Fokus auf robuste Backend-Systeme und effiziente Datenbankgestaltung.",
+                    "Ausbilder für den IT-Nachwuchs."
                 ]
             },
             {
-                "role": "Software Engineer",
-                "company": "Example Company",
-                "period": "2021 — 2023",
+                "role": "Trainee Software Engineering",
+                "company": "imat-uve",
+                "location": "Mönchengladbach",
+                "period": "09/2020 — 09/2024",
                 "description": [
-                    "Built and shipped REST and GraphQL APIs backed by relational and NoSQL databases.",
-                    "Deployed and operated services on cloud infrastructure with monitoring and alerting.",
-                    "Collaborated across teams to plan and deliver multi-quarter product initiatives."
+                    "Praxisintegriertes Studium (B. Sc. Informatik an der Hochschule Niederrhein): wissenschaftliche Methoden direkt mit industriellen Anforderungen verbunden."
+                ]
+            },
+            {
+                "role": "Aushilfe Software-Engineering",
+                "company": "imat-uve",
+                "location": "Mönchengladbach",
+                "period": "12/2019 — 08/2020",
+                "description": []
+            }
+        ],
+        "volunteering": [
+            {
+                "role": "Vorstand",
+                "company": "CodeClubMG e.V.",
+                "href": "https://codeclubmg.de",
+                "description": [
+                    "Junge Talente für Informatik begeistern und komplexe Lerninhalte verständlich vermitteln.",
+                    "Ausgezeichnet mit dem mitBedacht Preis für ehrenamtliches Engagement."
                 ]
             }
         ],
         "skills": [
             {
-                "category": "Languages",
+                "category": "Software Engineering",
                 "items": [
-                    "TypeScript",
-                    "JavaScript",
+                    "Laravel",
+                    "FilamentPHP",
+                    "ERPNext",
                     "Python",
-                    "Go",
+                    "TypeScript",
                     "SQL",
-                    "Bash"
+                    "CSS",
+                    "Git",
+                    "Fullstack",
+                    "Webanwendungen",
+                    "Software-Architektur",
+                    "Datenbankdesign",
+                    "Backend-Systeme"
                 ]
             },
             {
-                "category": "Frameworks & Libraries",
+                "category": "Cyber Security",
                 "items": [
-                    "React",
-                    "Node.js",
-                    "Express",
-                    "Astro",
-                    "Prisma",
-                    "Tailwind CSS"
+                    "DFIR",
+                    "Incident Response",
+                    "ISO 22301",
+                    "DSGVO"
                 ]
             },
             {
-                "category": "Infrastructure",
+                "category": "Führung & Methoden",
                 "items": [
-                    "Docker",
-                    "Kubernetes",
-                    "AWS",
-                    "GCP",
-                    "Terraform",
-                    "CI/CD"
+                    "Teamleitung",
+                    "Personalentwicklung",
+                    "Ausbildung",
+                    "Scrum"
                 ]
             },
             {
-                "category": "Practices",
+                "category": "Sprachen",
                 "items": [
-                    "Testing",
-                    "Code Review",
-                    "Agile",
-                    "Observability",
-                    "Security Awareness"
+                    "Deutsch",
+                    "Englisch"
                 ]
             }
         ],
         "education": [
             {
-                "degree": "B.S. in Computer Science",
-                "institution": "Example University",
-                "period": "2017 — 2021"
+                "degree": "M. Sc. Cyber Security Management",
+                "institution": "Hochschule Niederrhein",
+                "period": "2024 — 2026",
+                "details": [
+                    "Masterarbeit: „Digitale Forensik im Spannungsfeld zwischen Strafverfolgung und Incident Response: Eine Evaluierung der akademischen Ausbildung anhand praxisrelevanter Qualifikationsanforderungen“"
+                ]
+            },
+            {
+                "degree": "B. Sc. Informatik",
+                "institution": "Hochschule Niederrhein",
+                "period": "2020 — 2024",
+                "details": [
+                    "Bachelorarbeit: „Konzeption und Entwicklung einer Übersicht zur Unterstützung für Projektingenieure und Vertriebsberater im Kundenkontakt innerhalb eines bestehenden ERP- und Laborinformationssystems“ (Note: 1,0)",
+                    "Abschlussnote: 1,4"
+                ]
+            }
+        ],
+        "certifications": [
+            {
+                "name": "BCM-Praktiker",
+                "issuer": "Bundesamt für Sicherheit in der Informationstechnik (BSI)",
+                "date": "03/2026"
+            },
+            {
+                "name": "Cribl Certified User",
+                "issuer": "Cribl",
+                "date": "01/2026"
+            },
+            {
+                "name": "Befreiungsbescheinigung für Ausbilder gemäß § 6 Abs. 3 AEVO",
+                "issuer": "IHK Mittlerer Niederrhein",
+                "date": "09/2025"
+            },
+            {
+                "name": "Basiszertifikat im Projektmanagement (GPM)",
+                "issuer": "GPM Deutsche Gesellschaft für Projektmanagement e. V.",
+                "date": "08/2025"
+            },
+            {
+                "name": "Vorfall-Praktiker",
+                "issuer": "Bundesamt für Sicherheit in der Informationstechnik (BSI)",
+                "date": "06/2025"
+            },
+            {
+                "name": "Digitaler Ersthelfer",
+                "issuer": "Bundesamt für Sicherheit in der Informationstechnik (BSI)",
+                "date": "05/2025"
+            },
+            {
+                "name": "CCNA: Introduction to Networks",
+                "issuer": "Cisco",
+                "date": "01/2023"
+            },
+            {
+                "name": "Professional Scrum Master I",
+                "issuer": "Scrum.org",
+                "date": "02/2020"
+            },
+            {
+                "name": "Professional Scrum Product Owner I",
+                "issuer": "Scrum.org",
+                "date": "02/2020"
             }
         ]
     }

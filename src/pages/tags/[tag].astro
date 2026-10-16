@@ -39,7 +39,7 @@ function formatDisplayDate(dateStr?: string): string {
   try {
     const date = new Date(dateStr);
     if (!isNaN(date.getTime())) {
-      return date.toLocaleDateString('en-US', {
+      return date.toLocaleDateString('de-DE', {
         month: 'short',
         day: 'numeric',
         year: 'numeric',
@@ -52,13 +52,13 @@ function formatDisplayDate(dateStr?: string): string {
 }
 ---
 
-<Base title={`#${tag} - Tags`} description={`Articles tagged with ${tag}.`}>
+<Base title={`#${tag} - Tags`} description={`Artikel mit dem Tag ${tag}.`}>
   <section class="container mx-auto px-6 pt-16 pb-20">
     <div class="max-w-3xl mx-auto">
       <nav aria-label="Breadcrumb" class="mb-6">
         <ol class="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
           <li class="flex items-center gap-1.5">
-            <a href="/" class="transition-colors hover:text-foreground">Home</a>
+            <a href="/" class="transition-colors hover:text-foreground">Start</a>
           </li>
           <li class="flex items-center gap-1.5">
             <ChevronRight size={12} class="opacity-60" />
@@ -76,7 +76,7 @@ function formatDisplayDate(dateStr?: string): string {
           <span class="text-accent">#</span>{tag}
         </h1>
         <p class="mt-3 text-base text-muted-foreground">
-          {posts.length} {posts.length === 1 ? 'article' : 'articles'} tagged with “{tag}”.
+          {posts.length} {posts.length === 1 ? 'Artikel' : 'Artikel'} mit dem Tag „{tag}“.
         </p>
       </header>
 
@@ -113,7 +113,7 @@ function formatDisplayDate(dateStr?: string): string {
                 </time>
                 {typeof post.readMinutes === 'number' && (
                   <span class="text-xs text-muted-foreground/70 block mt-0.5">
-                    {post.readMinutes} min read
+                    {post.readMinutes} Min. Lesezeit
                   </span>
                 )}
               </div>

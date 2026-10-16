@@ -13,7 +13,7 @@ export type SearchBarProps = {
 export default function SearchBar({
   value = '',
   onChange,
-  placeholder = 'Search articles...',
+  placeholder = 'Artikel durchsuchen ...',
   className = '',
   posts = []
 }: SearchBarProps) {

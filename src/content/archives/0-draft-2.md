@@ -4,7 +4,7 @@ description: Placeholder post — replace this content with your own.
 date: 2026-09-04
 tags:
   - draft
-draft: false
+draft: true
 ---
 
 This is a pseudo file to fill. Write your content here.

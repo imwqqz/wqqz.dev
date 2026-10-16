@@ -16,7 +16,7 @@ function formatDisplayDate(dateStr?: string): string {
   try {
     const date = new Date(dateStr)
     if (!isNaN(date.getTime())) {
-      return date.toLocaleDateString('en-US', {
+      return date.toLocaleDateString('de-DE', {
         month: 'short',
         day: 'numeric',
         year: 'numeric',
@@ -108,7 +108,7 @@ export default function SearchOverlay({
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Search articles"
+      aria-label="Artikel durchsuchen"
       className="fixed inset-0 z-[60] flex items-start justify-center overflow-y-auto bg-black/40 px-4 pb-10 pt-[14vh] backdrop-blur-sm dark:bg-black/60"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose()
@@ -141,8 +141,8 @@ export default function SearchOverlay({
               setQuery(next)
               onQueryChange?.(next)
             }}
-            placeholder="Search articles..."
-            aria-label="Search articles"
+            placeholder="Artikel durchsuchen ..."
+            aria-label="Artikel durchsuchen"
             className="w-full bg-transparent py-3.5 text-sm text-foreground outline-none placeholder:text-muted-foreground/70"
           />
           <Kbd>esc</Kbd>
@@ -151,7 +151,7 @@ export default function SearchOverlay({
         <div ref={listRef} className="max-h-[46vh] overflow-y-auto py-1.5">
           {results.length === 0 ? (
             <div className="px-4 py-12 text-center text-sm text-muted-foreground" aria-live="polite">
-              No matching articles found{query.trim() ? ` for "${query.trim()}"` : ''}.
+              Keine passenden Artikel gefunden{query.trim() ? ` für „${query.trim()}“` : ''}.
             </div>
           ) : (
             results.map((post, idx) => {
@@ -194,7 +194,7 @@ export default function SearchOverlay({
                         </span>
                       ))}
                       {typeof post.readMinutes === 'number' && (
-                        <span className="text-[11px] text-muted-foreground/60">{post.readMinutes} min read</span>
+                        <span className="text-[11px] text-muted-foreground/60">{post.readMinutes} Min. Lesezeit</span>
                       )}
                     </div>
                   )}

@@ -16,7 +16,7 @@ function formatDisplayDate(dateStr?: string): string {
   try {
     const date = new Date(dateStr)
     if (!isNaN(date.getTime())) {
-      return date.toLocaleDateString('en-US', {
+      return date.toLocaleDateString('de-DE', {
         month: 'short',
         day: 'numeric',
         year: 'numeric',
@@ -98,7 +98,7 @@ function PostItem({ post }: { post: Post }) {
           </time>
           {typeof post.readMinutes === 'number' && (
             <span className="text-xs text-muted-foreground/70 block mt-0.5">
-              {post.readMinutes} min read
+              {post.readMinutes} Min. Lesezeit
             </span>
           )}
         </div>
@@ -128,7 +128,7 @@ export default function ArchiveList({ posts = [], initialQuery = '', tags }: Arc
           <SearchBar 
             value={query || ''} 
             onChange={setQuery} 
-            placeholder="Search articles..." 
+            placeholder="Artikel durchsuchen ..." 
             posts={posts}
           />
         </div>
@@ -152,7 +152,7 @@ export default function ArchiveList({ posts = [], initialQuery = '', tags }: Arc
 
       {safePosts.length === 0 ? (
         <div className="text-center text-muted-foreground py-12" aria-live="polite" role="status">
-          No matching articles found.
+          Keine passenden Artikel gefunden.
         </div>
       ) : (
         <div className="space-y-10 sm:space-y-12">

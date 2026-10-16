@@ -2,6 +2,7 @@
 title: Lorem Ipsum
 description: Standard filler text used to preview typography, spacing, and layout breakpoints.
 date: 2026-09-02
+draft: true
 tags:
   - examples
   - formatting
