@@ -89,7 +89,7 @@ On the Docker host, `compose.yml` runs the site plus Watchtower, which pulls new
 docker compose up -d
 ```
 
-TLS and the access log are handled by the reverse proxy in front of the container. If its logging changes, update section 4 of `src/pages/datenschutz/index.astro`.
+TLS is handled by the reverse proxy in front of the container. Neither the proxy nor the container keeps an access log; if that changes, update section 4 of `src/pages/datenschutz/index.astro`.
 
 ## Customizing colors
 

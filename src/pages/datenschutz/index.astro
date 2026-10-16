@@ -72,8 +72,8 @@ const link = "text-muted-foreground underline underline-offset-2 decoration-acce
             </p>
             <p class={paragraph}>
                 Die Verbindung wird über einen ebenfalls selbst betriebenen Reverse Proxy hergestellt, der die
-                SSL-/TLS-Verschlüsselung übernimmt und die Anfragen an den Webserver weiterleitet. Ihre IP-Adresse wird
-                dabei nicht an den Webserver weitergegeben.
+                SSL-/TLS-Verschlüsselung übernimmt und die Anfragen an den Webserver weiterleitet. Beide Systeme werden
+                ausschließlich vom Verantwortlichen betrieben.
             </p>
 
             <h2 class={chapterTitle}>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
@@ -251,28 +251,33 @@ const link = "text-muted-foreground underline underline-offset-2 decoration-acce
 
             <h2 class={chapterTitle}>4. Datenerfassung auf dieser Website</h2>
 
-            <h3 class={sectionTitle}>Server-Log-Dateien</h3>
+            <h3 class={sectionTitle}>Zugriffsdaten und Fehlerprotokolle</h3>
             <p class={paragraph}>
-                Beim Aufruf dieser Website verarbeitet der Reverse Proxy technisch notwendig Ihre IP-Adresse, um die
-                Verbindung herzustellen und die Inhalte auszuliefern. Gespeichert wird Ihre IP-Adresse nur in gekürzter
-                Form: Bei IPv4-Adressen wird das letzte Oktett, bei IPv6-Adressen alles nach den ersten 48 Bit entfernt.
-                Ein Rückschluss auf Ihren Anschluss ist damit nicht mehr möglich. In den Server-Log-Dateien werden
-                ausschließlich folgende Angaben gespeichert:
+                Beim Aufruf dieser Website übermittelt Ihr Browser automatisch technische Daten an unseren Server. Dies
+                sind insbesondere:
             </p>
             <ul class={list}>
-                <li>gekürzte IP-Adresse</li>
+                <li>IP-Adresse des anfragenden Geräts</li>
                 <li>Datum und Uhrzeit der Serveranfrage</li>
-                <li>Protokoll, Anfragemethode und aufgerufener Hostname</li>
                 <li>aufgerufene Seite bzw. Datei</li>
-                <li>HTTP-Statuscode, übertragene Datenmenge und Bearbeitungsdauer</li>
+                <li>Browsertyp und Browserversion sowie verwendetes Betriebssystem</li>
+                <li>Referrer URL</li>
             </ul>
             <p class={paragraph}>
-                Browsertyp, Betriebssystem, Referrer-URL sowie sonstige vom Browser übermittelte Header werden nicht
-                gespeichert. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die
-                Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein
-                berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Sicherheit seiner Website –
-                hierzu müssen die Server-Log-Dateien erfasst werden. Die Server-Log-Dateien werden täglich rotiert und
-                spätestens nach 7 Tagen automatisch gelöscht.
+                Diese Daten werden nur verarbeitet, um die Verbindung herzustellen und die Website auszuliefern. Ein
+                Zugriffsprotokoll (Access-Log) wird weder vom Reverse Proxy noch vom Webserver geführt; die Daten werden
+                nach Abschluss der jeweiligen Anfrage nicht gespeichert.
+            </p>
+            <p class={paragraph}>
+                Tritt bei der Auslieferung ein technischer Fehler auf (z.&nbsp;B. weil der Webserver vorübergehend nicht
+                erreichbar ist), kann die betroffene Anfrage einschließlich der oben genannten Daten im Fehlerprotokoll
+                des Servers gespeichert werden. Diese Fehlerprotokolle dienen ausschließlich der Fehleranalyse und der
+                Sicherheit des Betriebs, werden nicht mit anderen Datenquellen zusammengeführt und gelöscht, sobald sie
+                hierfür nicht mehr erforderlich sind.
+            </p>
+            <p class={paragraph}>
+                Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein
+                berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Sicherheit seiner Website.
             </p>
 
             <h3 class={sectionTitle}>Lokale Speicherung im Browser</h3>
