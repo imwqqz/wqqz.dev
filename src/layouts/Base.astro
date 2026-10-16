@@ -1,11 +1,17 @@
 ---
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/jetbrains-mono/600.css";
+import "@fontsource/jetbrains-mono/700.css";
+import "@fontsource/jetbrains-mono/400-italic.css";
+import "@fontsource/jetbrains-mono/600-italic.css";
 import "../styles/global.css";
 import "katex/dist/katex.min.css";
 import Navigation from '../components/Navigation.astro';
 import { info } from '../lib/info.ts';
 
-interface BaseProps { title?: string; description?: string; ogImage?: string }
-const { title = info.site.title, description = info.site.description, ogImage } = Astro.props as BaseProps;
+interface BaseProps { title?: string; description?: string; ogImage?: string; noindex?: boolean }
+const { title = info.site.title, description = info.site.description, ogImage, noindex = false } = Astro.props as BaseProps;
 const siteName = info.site.name;
 const canonical = info.site.url;
 const siteUrl = info.site.url;
@@ -22,11 +28,7 @@ const resolvedOgImage = ogImage ?? (info.site.ogImage || undefined);
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131316"/>
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfd"/>
     <meta name="msapplication-TileColor" content="#131316"/>
-    <meta name="robots" content="index,follow"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-          rel="stylesheet"/>
+    <meta name="robots" content={noindex ? "noindex,nofollow" : "index,follow"}/>
     <script is:inline>
       (() => {
         const stored = localStorage.getItem('theme');
@@ -74,5 +76,11 @@ const resolvedOgImage = ogImage ?? (info.site.ogImage || undefined);
 <main class="flex-grow flex flex-col">
 <slot/>
 </main>
+<footer class="container mx-auto px-6 py-6">
+    <div class="flex items-center justify-center gap-6 text-xs text-muted-foreground">
+        <a href="/impressum" class="hover:text-foreground transition-colors">Impressum</a>
+        <a href="/datenschutz" class="hover:text-foreground transition-colors">Datenschutz</a>
+    </div>
+</footer>
 </body>
 </html>
